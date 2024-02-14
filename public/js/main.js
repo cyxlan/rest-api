@@ -1,4 +1,3 @@
-// async/await
 async function getData() {
   try {
     // get data from API call
@@ -10,7 +9,7 @@ async function getData() {
     const imgContainer = document.querySelector("#img-container");
     imgContainer.innerHTML = `
       <img src="${data.url}" alt="${data.title}" />
-      <p>${data.explanation}</p>
+      <p class="caption">${data.explanation}</p>
     `;
 
   } catch (error) {
