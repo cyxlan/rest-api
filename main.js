@@ -1,22 +1,20 @@
 // async/await
-async function getData(city) {
+async function getData() {
   try {
-    const foobar = await fetch(`http://api.weatherapi.com/v1/current.json?key=29a43923498e423e92d183223230102&q=${city}`)
-    const data = await foobar.json();
-
+    // get data from API call
+    const response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=5XYp2eBUxpJyA0uaDnNiXIB2JKmBcTIz63xt2j6B`)
+    const data = await response.json();
     console.log(data);
-    console.log(data.current.temp_c);
 
-    const content = document.querySelector("#weather-info");
-    content.innerHTML = `
-    
-      <p>${data.location.name}, ${data.location.country}</p>
-      <p>${data.current.temp_c} °C</p>
-      <p><img src="${data.current.condition.icon}" alt="${data.current.condition.text}" /> ${data.current.condition.text}</p>
-    
+    // add content to page
+    const imgContainer = document.querySelector("#img-container");
+    imgContainer.innerHTML = `
+      <img src="${data.url}" alt="${data.title}" />
+      <p>${data.explanation}</p>
     `;
+
   } catch (error) {
-    console.warn(`Nope: ${error}`);
+    console.warn(error);
   }
 }
-getData("Toronto");
+getData();
