@@ -6,6 +6,8 @@
 body {
   padding: 60px 40px;
   background-color: #14213d;
+  font-family: 'Roboto', sans-serif;
+  color: #aec3b0;
 }
 
 /* title */
@@ -17,6 +19,28 @@ h1 {
   font-weight: 500;
   padding-bottom: 40px;
   text-align: center;
+}
+
+/* date picker */
+#date-picker-wrap {
+  display: flex;
+  width: min-content;
+  margin: 0 auto 30px;
+  border: 2px solid #aec3b0;
+}
+#date-picker-wrap label {
+  font-family: 'Inconsolata', monospace;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+#date-picker-wrap input {
+  padding: 5px 10px;
+  background-color: #aec3b0;
+  gap: 5px;
+  font-size: 20px;
+  text-transform: uppercase;
+  border: 0;
 }
 
 /* image */
@@ -31,9 +55,7 @@ h1 {
 }
 /* caption */
 #img-container .caption {
-  font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 20px;
-  color: #aec3b0;
   max-width: 960px; /* img width */
 }
