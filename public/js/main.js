@@ -2,9 +2,13 @@ const datePicker = document.querySelector("#date-picker");
 const imgContainer = document.querySelector("#img-container");
 let apiUrl = "https://api.nasa.gov/planetary/apod?api_key=5XYp2eBUxpJyA0uaDnNiXIB2JKmBcTIz63xt2j6B";
 
+// prevent picking future dates
+const today = new Date().toISOString().substring(0,10); // today's date as YYYY-MM-DD
+datePicker.setAttribute("max", today);
+
 async function getData(date) {
   try {
-    // if date entered, update url
+    // if date picked, update url
     if (date) {
       apiUrl = `https://api.nasa.gov/planetary/apod?api_key=5XYp2eBUxpJyA0uaDnNiXIB2JKmBcTIz63xt2j6B&date=${date}`
     }
@@ -25,6 +29,7 @@ async function getData(date) {
 }
 getData();
 
+// on date being picked, update date & get new content
 datePicker.addEventListener('change', () => {
   date = datePicker.value;
   getData(date);
