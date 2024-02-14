@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "lite-server"
+    "start": "lite-server --baseDir=\"public\""
   },
   "author": "Cynthia Lan",
   "license": "private",
