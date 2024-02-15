@@ -1,6 +1,6 @@
 const datePicker = document.querySelector("#date-picker");
 const imgContainer = document.querySelector("#img-container");
-let apiUrl = "https://api.nasa.gov/planetary/apod?api_key=5XYp2eBUxpJyA0uaDnNiXIB2JKmBcTIz63xt2j6B";
+let apiUrl;
 
 // get today's date as YYYY-MM-DD, accounting for UTC offset
 let today = new Date();
