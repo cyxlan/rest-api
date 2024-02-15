@@ -25,7 +25,7 @@ h1 {
 #date-picker-wrap {
   display: flex;
   width: min-content;
-  margin: 0 auto 30px;
+  margin: 0 auto 40px;
   border: 2px solid #aec3b0;
 }
 #date-picker-wrap label {
