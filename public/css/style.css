@@ -28,14 +28,16 @@ h1 {
   margin: 0 auto 40px;
   border: 2px solid #aec3b0;
 }
+#date-picker-wrap label,
+#date-picker-wrap input {
+  padding: 10px;
+}
 #date-picker-wrap label {
   font-family: 'Inconsolata', monospace;
-  padding: 10px;
   font-size: 24px;
   font-weight: 500;
 }
 #date-picker-wrap input {
-  padding: 5px 10px;
   background-color: #aec3b0;
   gap: 5px;
   font-size: 20px;
@@ -45,6 +47,8 @@ h1 {
 
 /* image */
 #img-container {
+  max-width: min-content;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,5 +61,4 @@ h1 {
 #img-container .caption {
   font-size: 16px;
   line-height: 20px;
-  max-width: 960px; /* img width */
 }
