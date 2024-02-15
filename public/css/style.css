@@ -54,7 +54,14 @@ h1 {
   align-items: center;
   gap: 40px;
 }
-#img-container img {
+/* video */
+iframe {
+  aspect-ratio: 16 / 9;
+  height: auto;
+  width: 960px;
+}
+#img-container img,
+iframe {
   max-width: calc(100vw - 80px); /* padding 40*2 */
 }
 /* caption */

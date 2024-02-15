@@ -19,9 +19,16 @@ async function getData(date) {
     const data = await response.json();
     console.log(data);
 
+    // set up HTML for image or video
+    let tag;
+    if (data.media_type === "image") {
+      tag = `<img src="${data.url}" alt="${data.title}" />`;
+    } else if (data.media_type === "video") {
+      tag = `<iframe src="${data.url}"></iframe>`
+    }
     // add content to page
     imgContainer.innerHTML = `
-      <img src="${data.url}" alt="${data.title}" />
+      ${tag}
       <p class="caption">${data.explanation}</p>
     `;
 
